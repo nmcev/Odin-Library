@@ -90,8 +90,11 @@ addBookBtn.addEventListener('click', () => {
 })
 
 function displayForm() {
-    if (form.style.display === 'none') {
+    form.style.display === 'none'? form.style.display = 'block': form.style.display === 'inline';
 
-        form.style.display = 'block'
-    }
+    let closeFormButton = document.getElementById('close-form-btn');
+    closeFormButton.addEventListener('click', () => {
+        form.style.display = 'none';
+    });
+    form.appendChild(closeFormButton);
 }
