@@ -26,45 +26,45 @@
     <div class=" custom-width ">
         <!-- button -->
         <div class="pt-16 animate-pulse mx-auto h-16 w-64 flex justify-center items-center">
-            <div
-                class=" h-16 w-64 bg-pink-600 items-center rounded-2xl shadow-2xl cursor-pointer absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out">
-            </div>
-            <button class="text-center text-white font-semibold z-10" id="addBook-btn">Add New Book!</button>
+            <button
+                class=" h-16 w-64 bg-pink-600 items-center rounded-2xl shadow-2xl cursor-pointer absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out text-center text-white font-semibold z-10"
+                id="addBook-btn">Add New Book!</button>
         </div>
         <!-- /button /-->
 
         <!-- content -->
-        <div id="form-container"
-            class=" flex flex-col-reverse justify-center items-center border border-slate-950 p-10">
+        <div id="form-container" class="flex flex-col-reverse justify-center items-center border border-slate-950 p-10">
             <form id="form" class="flex flex-col gap-y-5">
                 <!-- title -->
                 <div class="flex flex-col">
                     <label for="">Title</label>
-                    <input id="title" class="border border-slate-400 w-96 type=" text">
+                    <input id="title" class="border border-slate-400 w-full md:w-96 py-2 px-4" type="text" required>
                 </div>
                 <!-- /title/ -->
 
                 <!-- Author -->
                 <div class="flex flex-col">
                     <label for="">Author</label>
-                    <input id="author" class="border border-slate-400 w-96 type=" text">
+                    <input id="author" class="border border-slate-400 w-full md:w-96 py-2 px-4" type="text" required>
                 </div>
                 <!--/ Author/ -->
+
                 <!-- Number of Page -->
                 <div class="flex flex-col">
-                    <label for="">Number of page</label>
-                    <input id="pageNum" class="border border-slate-400 w-96 type=" text">
+                    <label for="">Number of pages</label>
+                    <input id="pageNum" class="border border-slate-400 w-full md:w-96 py-2 px-4" type="text" required>
                 </div>
                 <!--/ Number of Page/ -->
 
                 <!-- checkbox  -->
                 <div class="flex items-center">
                     <label for="link-checkbox"
-                        class=" ml-2 text-base font-medium text-gray-900 dark:text-gray-300 ">Read ?</label>
-                    <input id="isRead" type="checkbox" value=""
-                        class="relative  left-3 px-4 w-4 h-4 text-blue-600  bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        class="ml-2 text-base font-medium text-gray-900 dark:text-gray-300">Read?</label>
+                    <input id="isRead" type="checkbox"
+                        class="relative left-3 px-4 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                 </div>
                 <!-- /checkbox/ -->
+
                 <!-- confirm button  -->
                 <div>
                     <button id="add-book-btn" class="custom-shadow w-full p-3 rounded-lg font-medium">Add The

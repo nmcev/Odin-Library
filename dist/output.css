@@ -615,6 +615,10 @@ video {
   align-items: center;
 }
 
+.justify-end{
+  justify-content: flex-end;
+}
+
 .justify-center{
   justify-content: center;
 }
@@ -626,6 +630,11 @@ video {
 
 .gap-y-5{
   row-gap: 1.25rem;
+}
+
+.gap-x-2{
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 
 .overflow-hidden{
@@ -694,6 +703,11 @@ video {
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .pt-16{
@@ -866,5 +880,11 @@ video {
   .dark\:focus\:ring-blue-600:focus{
     --tw-ring-opacity: 1;
     --tw-ring-color: rgb(37 99 235 / var(--tw-ring-opacity));
+  }
+}
+
+@media (min-width: 768px){
+  .md\:w-96{
+    width: 24rem;
   }
 }
