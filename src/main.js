@@ -11,11 +11,15 @@ function Book(title, author, pageNum, isRead) {
 
 function addBookToLibrary() {
 
-    let newBook = new Book('Bad Habit', 'Muha', 23, 'no')
-    let AnewBook = new Book('Habit', 'kinaa', 223, 'yes')
+    let title = document.getElementById('title').value
+    let author = document.getElementById('author').value
+    let pageNum = document.getElementById('pageNum').value
+    let isRead = document.getElementById('isRead').value
 
-    myLibrary.push(newBook)
-    myLibrary.push(AnewBook)
+    let book = new Book(title, author, pageNum, isRead);
+
+    myLibrary.push(book);
+    displayBook();
 }
 
 function displayBook() {

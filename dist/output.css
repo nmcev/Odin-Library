@@ -524,24 +524,12 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.pointer-events-none{
-  pointer-events: none;
-}
-
 .absolute{
   position: absolute;
 }
 
 .relative{
   position: relative;
-}
-
-.right-8{
-  right: 2rem;
-}
-
-.left-5{
-  left: 1.25rem;
 }
 
 .left-3{
@@ -703,22 +691,9 @@ video {
   padding: 0.75rem;
 }
 
-.p-9{
-  padding: 2.25rem;
-}
-
-.p-5{
-  padding: 1.25rem;
-}
-
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.px-6{
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 .pt-16{
@@ -736,16 +711,6 @@ video {
 .text-4xl{
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-
-.text-sm{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.text-lg{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
 }
 
 .text-base{
