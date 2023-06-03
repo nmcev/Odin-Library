@@ -18,8 +18,7 @@ function addBookToLibrary() {
     let title = document.getElementById('title').value
     let author = document.getElementById('author').value
     let pageNum = document.getElementById('pageNum').value
-    let isRead = document.getElementById('isRead').value
-
+    let isRead = document.getElementById('isRead').checked ? 'Yes' : 'No'
     let book = new Book(title, author, pageNum, isRead);
 
     myLibrary.push(book);
