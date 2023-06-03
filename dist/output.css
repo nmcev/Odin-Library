@@ -565,7 +565,8 @@ video {
 
 .custom-shadow {
   box-shadow: 0 10px 23px rgba(0, 0, 0, 0.2);
-  background-color: #d5a7a7ca;
+  /* background-color: #d5a7a7ca; */
+  background-color: rgba(255, 105, 180, 0.685);
 }
 
 .first-letter\:text-5xl::first-letter{
