@@ -48,17 +48,31 @@ function displayBook() {
             removeBook(i)
         });
 
+        let changeIsRead = document.createElement('button');
+        changeIsRead.classList.add('change-is-read');
+        book.isRead === 'Yes' ? changeIsRead.innerHTML = "Unread" : changeIsRead.innerHTML = "Read";
+
+        changeIsRead.addEventListener('click', function () {
+            changeIsReadBook(i);
+        });
+
         bookDetails.innerHTML = `     
         <h2>${book.title}</h2>
         <p>By: ${book.author}</p>
         <p>Page Number: ${book.pageNum}</p>
         <p>Read: ${book.isRead}</p>`;
 
+        divForButtons.appendChild(changeIsRead);
         divForButtons.appendChild(removeBookButton);
         bookDetails.appendChild(divForButtons);
         bookContainer.appendChild(bookDetails);
     }
     cardBook.appendChild(bookContainer);
+}
+
+function changeIsReadBook(index) {
+    myLibrary[index].isRead = myLibrary[index].isRead === 'Yes' ? 'No' : 'Yes';
+    displayBook();
 }
 
 function removeBook(index) {
