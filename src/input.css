@@ -20,7 +20,7 @@
 }
 
 .book {
-    background-color:rgba(255, 105, 180, 0.685);
+    background-color: rgba(255, 105, 180, 0.685);
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -33,7 +33,7 @@
     margin-bottom: 5px;
     font-weight: 500;
     font-size: 28px;
-    
+
 }
 
 .book p {
@@ -41,4 +41,12 @@
     font-size: 17px;
     margin-bottom: 3px;
     font-weight: 300;
+}
+
+.custom-width {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
 }
