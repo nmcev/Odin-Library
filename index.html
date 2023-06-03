@@ -7,6 +7,23 @@
     <link href="output.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="/images/book.svg" />
     <title>Odin-Library</title>
+
+    <style>
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-top: 20px;
+        }
+
+        .remove-book-button {
+            background-color: #262626f1;
+            color: #fff;
+            font-size: .8rem;
+            padding: .5rem;
+            border-radius: .5rem;
+        }
+    </style>
 </head>
 
 <body class="font-lexend">
@@ -26,10 +43,9 @@
     <div class=" custom-width ">
         <!-- button -->
         <div class="pt-16 animate-pulse mx-auto h-16 w-64 flex justify-center items-center">
-            <div
-                class=" h-16 w-64 bg-pink-600 items-center rounded-2xl shadow-2xl cursor-pointer absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out">
-            </div>
-            <button class="text-center text-white font-semibold z-10" id="addBook-btn">Add New Book!</button>
+            <button
+                class=" h-16 w-64 bg-pink-600 items-center rounded-2xl shadow-2xl cursor-pointer absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out text-center text-white font-semibold z-10"
+                id="addBook-btn">Add New Book!</button>
         </div>
         <!-- /button /-->
 
@@ -39,21 +55,21 @@
                 <!-- title -->
                 <div class="flex flex-col">
                     <label for="">Title</label>
-                    <input id="title" class="border border-slate-400 w-full md:w-96 py-2 px-4" type="text">
+                    <input id="title" class="border border-slate-400 w-full md:w-96 py-2 px-4" type="text" required>
                 </div>
                 <!-- /title/ -->
 
                 <!-- Author -->
                 <div class="flex flex-col">
                     <label for="">Author</label>
-                    <input id="author" class="border border-slate-400 w-full md:w-96 py-2 px-4" type="text">
+                    <input id="author" class="border border-slate-400 w-full md:w-96 py-2 px-4" type="text" required>
                 </div>
                 <!--/ Author/ -->
 
                 <!-- Number of Page -->
                 <div class="flex flex-col">
                     <label for="">Number of pages</label>
-                    <input id="pageNum" class="border border-slate-400 w-full md:w-96 py-2 px-4" type="text">
+                    <input id="pageNum" class="border border-slate-400 w-full md:w-96 py-2 px-4" type="text" required>
                 </div>
                 <!--/ Number of Page/ -->
 
