@@ -39,17 +39,33 @@ function displayBook() {
         let bookDetails = document.createElement('div');
         bookDetails.classList.add('book');
 
+        let divForButtons = document.createElement('div');
+        divForButtons.classList.add('buttons-container');
+
+        let removeBookButton = document.createElement('button');
+        removeBookButton.classList.add('remove-book-button');
+        removeBookButton.innerHTML = "Remove Book"
+        removeBookButton.addEventListener('click', function () {
+            removeBook(i)
+        });
+
         bookDetails.innerHTML = `     
         <h2>${book.title}</h2>
         <p>By: ${book.author}</p>
         <p>Page Number: ${book.pageNum}</p>
         <p>Read: ${book.isRead}</p>`;
 
+        divForButtons.appendChild(removeBookButton);
+        bookDetails.appendChild(divForButtons);
         bookContainer.appendChild(bookDetails);
     }
     cardBook.appendChild(bookContainer);
 }
 
+function removeBook(index) {
+    myLibrary.splice(index, 1);
+    displayBook()
+}
 
 let addBookBtn = document.getElementById('addBook-btn')
 let form = document.getElementById('form-container');
