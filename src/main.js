@@ -8,7 +8,11 @@ function Book(title, author, pageNum, isRead) {
     this.isRead = isRead
 }
 
-
+let formData = document.getElementById('form-container')
+formData.addEventListener("submit", function (event) {
+    event.preventDefault()
+    addBookToLibrary();
+})
 function addBookToLibrary() {
 
     let title = document.getElementById('title').value
