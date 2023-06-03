@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Sigmar&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-shadow {
+    box-shadow: 0 10px 23px rgba(0, 0, 0, 0.2);
+    /* background-color: #d5a7a7ca; */
+    background-color: rgba(255, 105, 180, 0.685);
+}
