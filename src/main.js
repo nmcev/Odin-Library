@@ -42,5 +42,17 @@ function displayBook() {
     cardBook.appendChild(bookContainer);
 }
 
-addBookToLibrary();
-displayBook()
+
+let addBookBtn = document.getElementById('addBook-btn')
+let form = document.getElementById('form-container');
+form.style.display = 'none'
+addBookBtn.addEventListener('click', () => {
+    displayForm();
+})
+
+function displayForm() {
+    if (form.style.display === 'none') {
+
+        form.style.display = 'block'
+    }
+}
