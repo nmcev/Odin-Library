@@ -87,7 +87,8 @@ function displayBook() {
 function deleteAllBooks() {
     let cardBook = document.getElementById('book-card')
     myLibrary = [];
-    cardBook.innerHTML = ""
+    cardBook.innerHTML = "";
+    showAndCloseLibraryBtn.style.display = "none"
 }
 
 function changeIsReadBook(index) {
