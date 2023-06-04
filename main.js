@@ -114,3 +114,20 @@ function displayForm() {
     });
     form.appendChild(closeFormButton);
 }
+
+let showAndCloseLibraryBtn = document.getElementById('show-library-btn');
+showAndCloseLibraryBtn.addEventListener('click', () => {
+    closeAndOpenLibrary()
+})
+
+function closeAndOpenLibrary() {
+
+    let bookContainer = document.getElementById('book-card');
+    if (bookContainer.style.display === 'none' || showAndCloseLibraryBtn.textContent == 'show library') {
+        bookContainer.style.display = 'block';
+        showAndCloseLibraryBtn.innerHTML = 'Hide library';
+    } else {
+        bookContainer.style.display = 'none';
+        showAndCloseLibraryBtn.innerHTML = 'show library';
+    }
+};
