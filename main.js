@@ -81,6 +81,7 @@ function displayBook() {
 
     bookContainer.appendChild(removeAllBooks);
     cardBook.appendChild(bookContainer);
+    displayHideAndShow()
 }
 
 function deleteAllBooks() {
@@ -120,6 +121,15 @@ function displayForm() {
 }
 
 let showAndCloseLibraryBtn = document.getElementById('show-library-btn');
+displayHideAndShow()
+
+function displayHideAndShow() {
+    if (myLibrary.length == 0) {
+        showAndCloseLibraryBtn.style.display = 'none';
+    } else {
+        showAndCloseLibraryBtn.style.display = 'block';
+    }
+}
 showAndCloseLibraryBtn.addEventListener('click', () => {
     closeAndOpenLibrary()
 })
@@ -127,11 +137,11 @@ showAndCloseLibraryBtn.addEventListener('click', () => {
 function closeAndOpenLibrary() {
 
     let bookContainer = document.getElementById('book-card');
-    if (bookContainer.style.display === 'none' || showAndCloseLibraryBtn.textContent == 'show library') {
+    if (bookContainer.style.display === 'block' || showAndCloseLibraryBtn.textContent == 'Hide library') {
+        bookContainer.style.display = 'none';
+        showAndCloseLibraryBtn.innerHTML = 'Show library';
+    } else {
         bookContainer.style.display = 'block';
         showAndCloseLibraryBtn.innerHTML = 'Hide library';
-    } else {
-        bookContainer.style.display = 'none';
-        showAndCloseLibraryBtn.innerHTML = 'show library';
     }
 };
