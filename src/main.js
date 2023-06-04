@@ -67,9 +67,22 @@ function displayBook() {
         bookDetails.appendChild(divForButtons);
         bookContainer.appendChild(bookDetails);
     }
+    let removeAllBooks = document.createElement('button');
+    removeAllBooks.classList.add('remove-all-books');
+    removeAllBooks.innerHTML = "Remove All Books";
+
+    removeAllBooks.addEventListener('click', function () {
+        deleteAllBooks();
+    });
+
+    bookContainer.appendChild(removeAllBooks);
     cardBook.appendChild(bookContainer);
 }
-
+function deleteAllBooks() {
+    let cardBook = document.getElementById('book-card')
+    myLibrary = [];
+    cardBook.innerHTML = "";
+}
 function changeIsReadBook(index) {
     myLibrary[index].isRead = myLibrary[index].isRead === 'Yes' ? 'No' : 'Yes';
     displayBook();
@@ -92,7 +105,7 @@ function displayForm() {
 
         form.style.display = 'block'
     }
-    
+
     let closeFormButton = document.getElementById('close-form-btn');
     closeFormButton.addEventListener('click', () => {
         form.style.display = 'none';
