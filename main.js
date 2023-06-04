@@ -22,6 +22,7 @@ formData.addEventListener("submit", function (event) {
     event.preventDefault()
     addBookToLibrary();
     displayHideAndShow(); // Call this after modifying the myLibrary array
+    clearFiled();
 })
 function addBookToLibrary() {
 
@@ -134,6 +135,7 @@ function displayForm() {
     let closeFormButton = document.getElementById('close-form-btn');
     closeFormButton.addEventListener('click', () => {
         form.style.display = 'none';
+        clearFiled();
     });
     form.appendChild(closeFormButton);
 }
@@ -165,5 +167,15 @@ function closeAndOpenLibrary() {
         showAndCloseLibraryBtn.innerHTML = 'Hide library';
         displayBook(); // Add this line to display the books
     }
+}
+
+function clearFiled() {
+    let title = document.getElementById('title');
+    let author = document.getElementById('author');
+    let pages = document.getElementById('pageNum');
+
+    title.value = '';
+    author.value = '';
+    pages.value = '';
 }
 loadFromLocalStorage()
