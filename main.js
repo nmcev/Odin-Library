@@ -1,6 +1,15 @@
 //An array to hold the books of the user 
 let myLibrary = [];
 
+function saveToLocalStorage() {
+    localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+}
+
+function loadFromLocalStorage() {
+    if (localStorage.getItem('myLibrary') !== null) {
+        myLibrary = JSON.parse(localStorage.getItem('myLibrary'));
+    }
+}
 function Book(title, author, pageNum, isRead) {
     this.title = title;
     this.author = author;
@@ -12,6 +21,7 @@ let formData = document.getElementById('form-container')
 formData.addEventListener("submit", function (event) {
     event.preventDefault()
     addBookToLibrary();
+    displayHideAndShow(); // Call this after modifying the myLibrary array
 })
 function addBookToLibrary() {
 
@@ -23,6 +33,7 @@ function addBookToLibrary() {
 
     myLibrary.push(book);
     displayBook();
+    saveToLocalStorage();  // Call this after modifying the myLibrary array
 }
 
 function displayBook() {
@@ -81,7 +92,7 @@ function displayBook() {
 
     bookContainer.appendChild(removeAllBooks);
     cardBook.appendChild(bookContainer);
-    displayHideAndShow()
+    displayHideAndShow();
 }
 
 function deleteAllBooks() {
@@ -89,16 +100,22 @@ function deleteAllBooks() {
     myLibrary = [];
     cardBook.innerHTML = "";
     showAndCloseLibraryBtn.style.display = "none"
+    saveToLocalStorage();  // Call this after modifying the myLibrary array
+    displayHideAndShow();
 }
 
 function changeIsReadBook(index) {
     myLibrary[index].isRead = myLibrary[index].isRead === 'Yes' ? 'No' : 'Yes';
     displayBook();
+    saveToLocalStorage();
+    displayHideAndShow();
 }
 
 function removeBook(index) {
     myLibrary.splice(index, 1);
-    displayBook()
+    saveToLocalStorage();
+    displayBook();
+    displayHideAndShow()
 }
 
 let addBookBtn = document.getElementById('addBook-btn')
@@ -125,18 +142,20 @@ let showAndCloseLibraryBtn = document.getElementById('show-library-btn');
 displayHideAndShow()
 
 function displayHideAndShow() {
-    if (myLibrary.length == 0) {
+    let localLibrary = JSON.parse(localStorage.getItem('myLibrary'));
+
+    if (myLibrary.length === 0 && (!localLibrary || localLibrary.length === 0)) {
         showAndCloseLibraryBtn.style.display = 'none';
     } else {
         showAndCloseLibraryBtn.style.display = 'block';
     }
 }
+
 showAndCloseLibraryBtn.addEventListener('click', () => {
     closeAndOpenLibrary()
 })
 
 function closeAndOpenLibrary() {
-
     let bookContainer = document.getElementById('book-card');
     if (bookContainer.style.display === 'block' || showAndCloseLibraryBtn.textContent == 'Hide library') {
         bookContainer.style.display = 'none';
@@ -144,5 +163,7 @@ function closeAndOpenLibrary() {
     } else {
         bookContainer.style.display = 'block';
         showAndCloseLibraryBtn.innerHTML = 'Hide library';
+        displayBook(); // Add this line to display the books
     }
-};
+}
+loadFromLocalStorage()
