@@ -557,10 +557,6 @@ video {
   display: block;
 }
 
-.inline{
-  display: inline;
-}
-
 .flex{
   display: flex;
 }
@@ -583,6 +579,10 @@ video {
 
 .w-64{
   width: 16rem;
+}
+
+.w-7{
+  width: 1.75rem;
 }
 
 .w-full{
@@ -696,6 +696,11 @@ video {
   background-color: rgb(71 85 105 / var(--tw-bg-opacity));
 }
 
+.bg-slate-700{
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+}
+
 .p-10{
   padding: 2.5rem;
 }
@@ -734,6 +739,10 @@ video {
 .text-base{
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.font-extrabold{
+  font-weight: 800;
 }
 
 .font-light{
