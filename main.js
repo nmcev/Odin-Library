@@ -71,6 +71,10 @@ function displayBook() {
     removeAllBooks.classList.add('remove-all-books');
     removeAllBooks.innerHTML = "Remove All Books";
 
+    if (myLibrary == "") {
+        removeAllBooks.style.display = "none";
+    }
+
     removeAllBooks.addEventListener('click', function () {
         deleteAllBooks();
     });
