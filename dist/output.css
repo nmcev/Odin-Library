@@ -701,6 +701,18 @@ video {
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
 }
 
+.bg-\[url\(\'img\/bg\.jpg\'\)\]{
+  background-image: url('img/bg.jpg');
+}
+
+.bg-\[url\(\'\'\)\]{
+  background-image: url('');
+}
+
+.bg-\[url\(\'https\:\/\/www\.google\.com\/imgres\?imgurl\=https\%3A\%2F\%2Fi0\.wp\.com\%2Fthesefootballtimes\.co\%2Fwp-content\%2Fuploads\%2F2019\%2F02\%2Flaliga\.jpg\%3Ffit\%3D2888\%252C2111\%26ssl\%3D1\&tbnid\=L2cT0uFaxD4Y0M\&vet\=12ahUKEwiXm8fezKz_AhXp87sIHVlhDs0QMyg1egQIARBq\.\.i\&imgrefurl\=https\%3A\%2F\%2Fthesefootballtimes\.co\%2F2019\%2F02\%2F08\%2Fhow-90-years-of-laliga-growth-and-some-odd-quirks-gave-us-24895-games-71149-goals-and-63-different-clubs\%2F\&docid\=EmOo9TffThXCXM\&w\=2888\&h\=2111\&q\=laliga\&ved\=2ahUKEwiXm8fezKz_AhXp87sIHVlhDs0QMyg1egQIARBq\'\)\]{
+  background-image: url('https://www.google.com/imgres?imgurl=https%3A%2F%2Fi0.wp.com%2Fthesefootballtimes.co%2Fwp-content%2Fuploads%2F2019%2F02%2Flaliga.jpg%3Ffit%3D2888%252C2111%26ssl%3D1&tbnid=L2cT0uFaxD4Y0M&vet=12ahUKEwiXm8fezKz_AhXp87sIHVlhDs0QMyg1egQIARBq..i&imgrefurl=https%3A%2F%2Fthesefootballtimes.co%2F2019%2F02%2F08%2Fhow-90-years-of-laliga-growth-and-some-odd-quirks-gave-us-24895-games-71149-goals-and-63-different-clubs%2F&docid=EmOo9TffThXCXM&w=2888&h=2111&q=laliga&ved=2ahUKEwiXm8fezKz_AhXp87sIHVlhDs0QMyg1egQIARBq');
+}
+
 .p-10{
   padding: 2.5rem;
 }
@@ -797,7 +809,7 @@ video {
 .custom-shadow {
   box-shadow: 0 10px 23px rgba(0, 0, 0, 0.2);
   /* background-color: #d5a7a7ca; */
-  background-color: rgba(255, 105, 180, 0.685);
+  background-color: rgba(255, 105, 180, 0.933);
 }
 
 .book-container {
