@@ -83,10 +83,13 @@ function displayBook() {
     removeAllBooks.classList.add('remove-all-books');
     removeAllBooks.innerHTML = "Remove All Books";
 
+<<<<<<< HEAD:main.js
     if (myLibrary == "") {
         removeAllBooks.style.display = "none";
     }
 
+=======
+>>>>>>> main:src/main.js
     removeAllBooks.addEventListener('click', function () {
         deleteAllBooks();
     });
@@ -104,7 +107,11 @@ function deleteAllBooks() {
     saveToLocalStorage();  // Call this after modifying the myLibrary array
     displayHideAndShow();
 }
-
+function deleteAllBooks() {
+    let cardBook = document.getElementById('book-card')
+    myLibrary = [];
+    cardBook.innerHTML = "";
+}
 function changeIsReadBook(index) {
     myLibrary[index].isRead = myLibrary[index].isRead === 'Yes' ? 'No' : 'Yes';
     displayBook();

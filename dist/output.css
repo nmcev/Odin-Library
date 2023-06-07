@@ -540,6 +540,10 @@ video {
   left: 0.75rem;
 }
 
+.left-4{
+  left: 1rem;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -581,12 +585,19 @@ video {
   width: 16rem;
 }
 
+<<<<<<< HEAD
 .w-7{
   width: 1.75rem;
 }
 
+=======
+>>>>>>> main
 .w-full{
   width: 100%;
+}
+
+.w-8{
+  width: 2rem;
 }
 
 .transform{
@@ -613,6 +624,10 @@ video {
 
 .flex-col-reverse{
   flex-direction: column-reverse;
+}
+
+.flex-wrap-reverse{
+  flex-wrap: wrap-reverse;
 }
 
 .items-center{
@@ -655,6 +670,10 @@ video {
 
 .rounded-lg{
   border-radius: 0.5rem;
+}
+
+.rounded-md{
+  border-radius: 0.375rem;
 }
 
 .border{
