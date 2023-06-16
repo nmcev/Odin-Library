@@ -10,11 +10,13 @@ function loadFromLocalStorage() {
         myLibrary = JSON.parse(localStorage.getItem('myLibrary'));
     }
 }
-function Book(title, author, pageNum, isRead) {
-    this.title = title;
-    this.author = author;
-    this.pageNum = pageNum;
-    this.isRead = isRead
+class Book {
+    constructor(title, author, pageNum, isRead) {
+        this.title = title;
+        this.author = author;
+        this.pageNum = pageNum;
+        this.isRead = isRead
+    }
 }
 
 let formData = document.getElementById('form-container')
@@ -83,13 +85,10 @@ function displayBook() {
     removeAllBooks.classList.add('remove-all-books');
     removeAllBooks.innerHTML = "Remove All Books";
 
-<<<<<<< HEAD:main.js
     if (myLibrary == "") {
         removeAllBooks.style.display = "none";
     }
 
-=======
->>>>>>> main:src/main.js
     removeAllBooks.addEventListener('click', function () {
         deleteAllBooks();
     });
@@ -107,13 +106,9 @@ function deleteAllBooks() {
     saveToLocalStorage();  // Call this after modifying the myLibrary array
     displayHideAndShow();
 }
-function deleteAllBooks() {
-    let cardBook = document.getElementById('book-card')
-    myLibrary = [];
-    cardBook.innerHTML = "";
-}
+
 function changeIsReadBook(index) {
-    myLibrary[index].isRead = myLibrary[index].isRead === 'Yes' ? 'No' : 'Yes';
+    myLibrary[index].isRead = myLibrary[index].isRead == 'Yes' ? 'No' : 'Yes';
     displayBook();
     saveToLocalStorage();
     displayHideAndShow();
