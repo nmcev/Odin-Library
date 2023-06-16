@@ -577,6 +577,13 @@ video {
   width: 16rem;
 }
 
+<<<<<<<<< Temporary merge branch 1
+=========
+.w-7{
+  width: 1.75rem;
+}
+
+>>>>>>>>> Temporary merge branch 2
 .w-full{
   width: 100%;
 }
